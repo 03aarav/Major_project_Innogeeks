@@ -1,14 +1,17 @@
 package com.example.project_innogeeks.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.project_innogeeks.ChatActivity
 import com.example.project_innogeeks.Model.StoreDataType
 import com.example.project_innogeeks.R
 
@@ -28,7 +31,11 @@ class MyListAdapter(private val context: Context,private val itemList: List<Stor
         Glide.with(holder.image)
             .load(currentItem.Imageurl)
             .into(holder.image)
-
+        holder.connectbtn.setOnClickListener{
+            val intent=Intent(context, ChatActivity::class.java)
+            intent.putExtra("Username", currentItem.name)
+            context.startActivity(intent)
+        }
 
     }
 
