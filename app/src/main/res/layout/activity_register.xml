@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:clickable="true"
+        android:id="@+id/timg"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="130dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/baseline_image_search_24"/>
+
+    <EditText
+        android:id="@+id/tname"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:hint="Enter your name"
+        android:textSize="25dp"/>
+    <EditText
+        android:id="@+id/tphone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:hint="Enter your phone Number"
+        android:textSize="25dp"/>
+    <EditText
+        android:id="@+id/Adress"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:hint="Enter your Addresss"
+        android:textSize="25dp"/>
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:entries="@array/predefined_profeesion_category"
+        android:textSize="25dp"/>
+    <EditText
+        android:id="@+id/AboutYourself"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:hint="About yourSelf"
+        android:textSize="25dp"/>
+    <Button
+        android:id="@+id/tbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="Register"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+
+
+
+
+</LinearLayout>

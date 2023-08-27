@@ -2,12 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.Project_Innogeeks" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#B563E6</item>
+        <item name="colorPrimaryVariant">#A962D5</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">#89C55E</item>
+        <item name="colorSecondaryVariant">#92D562</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>

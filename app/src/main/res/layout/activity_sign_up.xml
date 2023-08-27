@@ -29,13 +29,13 @@
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_marginTop="10dp"
             android:maxEms="20"
-            android:text="Enter Your Email and Password\n to get access to your account"
+            android:text="Enter Your Email and Password to get access to your account"
             android:textColor="@color/colorPrimaryText"/>
 
         <EditText
             android:id="@+id/etEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="344dp"
+            android:layout_height="58dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/edit_text_bg"
             android:ems="10"
@@ -45,8 +45,8 @@
 
         <EditText
             android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="341dp"
+            android:layout_height="52dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/edit_text_bg"
             android:ems="10"
@@ -56,8 +56,8 @@
 
         <EditText
             android:id="@+id/etConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="341dp"
+            android:layout_height="55dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/edit_text_bg"
             android:ems="10"
@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Already have an account?"
+            android:text="Already have an account"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryTextOpaque" />
 
