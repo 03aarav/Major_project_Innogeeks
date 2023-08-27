@@ -7,6 +7,13 @@
         <item>fireman</item>
         <item>painter</item>
         <item>Mechanic</item>
+        <item>Worker</item>
+        <item>Tailor</item>
+        <item>Doctor</item>
+        <item>Teacher</item>
+        <item>Pharmacist</item>
+        <item>Janitor</item>
+        <item>BasicNeed</item>
         <!-- Add more options as needed -->
     </string-array>
 </resources>
