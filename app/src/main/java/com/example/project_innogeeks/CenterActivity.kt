@@ -17,13 +17,13 @@ class CenterActivity : AppCompatActivity() {
         binding=ActivityCenterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val feature1=FeatureType("Search People",R.drawable.images)
+        val feature1=FeatureType("Search Profession",R.drawable.images)
         val feture2=FeatureType("Make Bidding",R.drawable.biding)
         val feature3=FeatureType("Search Query",R.drawable.a)
         val feature4=FeatureType("Register",R.drawable.sss)
 
         val listtype= mutableListOf(feature1,feture2,feature3,feature4)
-        binding.featureRecylerview.layoutManager=LinearLayoutManager(this)
+        binding.featureRecylerview.layoutManager=GridLayoutManager(this,2)
 
         featureAdapter=FeatureAdapter(this,listtype)
 

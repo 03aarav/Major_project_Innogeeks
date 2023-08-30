@@ -33,7 +33,7 @@ class LogIn : AppCompatActivity() {
         val pass1=binding.etPassword.text.toString()
         if (email.isNotEmpty()&&pass1.isNotEmpty()){
             auth.signInWithEmailAndPassword(email,pass1).addOnSuccessListener {
-                val intent= Intent(this,MainActivity::class.java)
+                val intent= Intent(this,CenterActivity::class.java)
                 startActivity(intent)
                 binding.etEmailAddress.text.clear()
                 binding.etPassword.text.clear()

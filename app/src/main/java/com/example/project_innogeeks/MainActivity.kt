@@ -40,10 +40,10 @@ class MainActivity : AppCompatActivity() {
         myMainAdapter= MyMainAdapter(this,listofProffesion)
         binding.recylerview.adapter=myMainAdapter
 
-        binding.Register.setOnClickListener {
-            val intent= Intent(this,RegisterActivity::class.java)
-            startActivity(intent)
-        }
+//        binding.Register.setOnClickListener {
+//            val intent= Intent(this,RegisterActivity::class.java)
+//            startActivity(intent)
+//        }
 
 
 
