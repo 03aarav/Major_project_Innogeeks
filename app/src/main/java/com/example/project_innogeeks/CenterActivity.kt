@@ -1,3 +1,6 @@
+package com.example.project_innogeeks
+
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -15,7 +18,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.project_innogeeks.Adapter.FeatureAdapter
 import com.example.project_innogeeks.LogIn
 import com.example.project_innogeeks.MakePost
-import com.example.project_innogeeks.Manifest
 import com.example.project_innogeeks.Model.FeatureType
 import com.example.project_innogeeks.R
 import com.example.project_innogeeks.databinding.ActivityCenterBinding
