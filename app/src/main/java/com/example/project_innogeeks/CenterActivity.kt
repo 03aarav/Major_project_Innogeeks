@@ -1,7 +1,9 @@
 package com.example.project_innogeeks
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
@@ -18,6 +20,7 @@ import com.example.project_innogeeks.Model.FeatureType
 import com.example.project_innogeeks.databinding.ActivityCenterBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.firebase.auth.FirebaseAuth
 import org.w3c.dom.Text
 import java.io.IOException
 import java.security.acl.Group
@@ -26,15 +29,18 @@ import java.util.*
 class CenterActivity : AppCompatActivity() {
     lateinit var binding: ActivityCenterBinding
     lateinit var featureAdapter: FeatureAdapter
+    private lateinit var auth: FirebaseAuth
+    private lateinit var sharedPreferences: SharedPreferences
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private lateinit var addTextView: TextView
     private lateinit var geocoder: Geocoder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityCenterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = FirebaseAuth.getInstance()
+        sharedPreferences = getSharedPreferences("myPreferences", Context.MODE_PRIVATE)
 
          val currentuserAddress=binding.textview.text.toString()
 
@@ -54,6 +60,14 @@ class CenterActivity : AppCompatActivity() {
             geocoder = Geocoder(this, Locale.getDefault())
             fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
             fetchLocationAndDisplayAddress(binding.textview)
+        }
+        binding.logOutbtn.setOnClickListener{
+            auth.signOut()
+            sharedPreferences.edit().clear().apply()
+            val intent = Intent(this, LogIn::class.java)
+            startActivity(intent)
+            finish()
+
         }
 
 
