@@ -69,12 +69,11 @@ class CenterActivity : AppCompatActivity() {
             finish()
 
         }
-
-
-
-
-
-
+//        binding.button.setOnClickListener {
+//            geocoder = Geocoder(this, Locale.getDefault())
+//            fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+//            fetchLocationAndDisplayAddress(binding.textview)
+//        }
     }
 
     private fun fetchLocationAndDisplayAddress(addressTextView: TextView) {
