@@ -1,6 +1,3 @@
-package com.example.project_innogeeks
-
-import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -8,23 +5,25 @@ import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
 import android.location.Location
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project_innogeeks.Adapter.FeatureAdapter
+import com.example.project_innogeeks.LogIn
+import com.example.project_innogeeks.MakePost
+import com.example.project_innogeeks.Manifest
 import com.example.project_innogeeks.Model.FeatureType
+import com.example.project_innogeeks.R
 import com.example.project_innogeeks.databinding.ActivityCenterBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.auth.FirebaseAuth
-import org.w3c.dom.Text
 import java.io.IOException
-import java.security.acl.Group
-import java.util.*
+import java.util.Locale
 
 class CenterActivity : AppCompatActivity() {
     lateinit var binding: ActivityCenterBinding
@@ -37,22 +36,23 @@ class CenterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityCenterBinding.inflate(layoutInflater)
+        binding= ActivityCenterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = FirebaseAuth.getInstance()
         sharedPreferences = getSharedPreferences("myPreferences", Context.MODE_PRIVATE)
 
-         val currentuserAddress=binding.textview.text.toString()
+        //val currentuserAddress=binding.textview.text.toString()
 
-        val feature1=FeatureType("Search Profession",R.drawable.images)
-        val feture2=FeatureType("Make Bidding",R.drawable.biding)
-        val feature3=FeatureType("Search Query",R.drawable.a)
-        val feature4=FeatureType("Register",R.drawable.sss)
+        val feature1= FeatureType("Search Profession",R.drawable.images)
+        val feture2= FeatureType("Make Bidding",R.drawable.biding)
+        val feature3= FeatureType("Search Query",R.drawable.a)
+        val feature4= FeatureType("Register",R.drawable.sss)
+        val feature5= FeatureType("Messages", R.drawable.chat)
 
-        val listtype= mutableListOf(feature1,feture2,feature3,feature4)
-        binding.featureRecylerview.layoutManager=GridLayoutManager(this,2)
+        val listtype= mutableListOf(feature1,feture2,feature3,feature4,feature5)
+        binding.featureRecylerview.layoutManager= GridLayoutManager(this,2)
 
-        featureAdapter=FeatureAdapter(this,listtype)
+        featureAdapter= FeatureAdapter(this,listtype)
 
         binding.featureRecylerview.adapter=featureAdapter
 
@@ -67,21 +67,16 @@ class CenterActivity : AppCompatActivity() {
             val intent = Intent(this, LogIn::class.java)
             startActivity(intent)
             finish()
-
         }
-//        binding.button.setOnClickListener {
-//            geocoder = Geocoder(this, Locale.getDefault())
-//            fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-//            fetchLocationAndDisplayAddress(binding.textview)
-//        }
+
+
+        val userAuthToken= FirebaseAuth.getInstance().currentUser?.getIdToken(true)
+
+
+
+
+
     }
-
-    val userAuthToken=FirebaseAuth.getInstance().currentUser?.getIdToken(true)
-
-
-
-
-
 
     private fun fetchLocationAndDisplayAddress(addressTextView: TextView) {
         // Check for location permissions
@@ -124,7 +119,7 @@ class CenterActivity : AppCompatActivity() {
                 val address: Address = addresses[0]
                 val addressText = address.getAddressLine(0)
                 addressTextView.text = addressText
-                val intent= Intent(this,MakePost::class.java)
+                val intent= Intent(this, MakePost::class.java)
                 intent.putExtra("currentAddress",addressText)
                 startActivity(intent)
             } else {
