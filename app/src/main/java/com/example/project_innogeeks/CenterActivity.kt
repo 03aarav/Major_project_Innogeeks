@@ -24,6 +24,7 @@ import com.example.project_innogeeks.databinding.ActivityCenterBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.auth.FirebaseAuth
+import org.w3c.dom.Text
 import java.io.IOException
 import java.util.Locale
 
