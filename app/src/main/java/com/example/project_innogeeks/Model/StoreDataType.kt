@@ -4,7 +4,7 @@ import java.io.WriteAbortedException
 
 data class StoreDataType(
     val about:String,
-    val address:String,
+    val addrress:String,
     val category:String,
     val Imageurl:String,
     val name:String,

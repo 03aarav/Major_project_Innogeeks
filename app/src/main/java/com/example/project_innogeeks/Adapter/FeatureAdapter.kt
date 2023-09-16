@@ -10,11 +10,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.project_innogeeks.MainActivity
-import com.example.project_innogeeks.MakePost
+import com.example.project_innogeeks.*
 import com.example.project_innogeeks.Model.FeatureType
-import com.example.project_innogeeks.R
-import com.example.project_innogeeks.RegisterActivity
 
 class FeatureAdapter(private val context: Context,private val items: List<FeatureType>) : RecyclerView.Adapter<FeatureAdapter.ViewHolder>() {
 
@@ -43,6 +40,10 @@ class FeatureAdapter(private val context: Context,private val items: List<Featur
 
                  3-> {
                      val intent=Intent(context,RegisterActivity::class.java)
+                     context.startActivity(intent)
+                 }
+                 5->{
+                     val intent=Intent(context,MessageActivity::class.java)
                      context.startActivity(intent)
                  }
              }

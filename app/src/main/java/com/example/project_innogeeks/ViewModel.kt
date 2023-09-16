@@ -33,7 +33,7 @@ class viewModel: ViewModel() {
                     for ((_, value) in data) {
                         val name = value["name"] ?: ""
                         val phone = value["phone"] ?: ""
-                        val address = value["address"] ?: ""
+                        val address = value["addrress"] ?: ""
                         val downurl = value["imagUrl"] ?: ""
                         val uid =value["uid"]?:""
                         val about=value["abortPolicy"]?:""

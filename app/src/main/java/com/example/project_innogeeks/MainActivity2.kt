@@ -3,6 +3,7 @@ package com.example.project_innogeeks
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,6 +43,20 @@ class MainActivity2 : AppCompatActivity() {
 
         }
 
+        binding.Searchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                // Handle query submission if needed
+                return false
+            }
 
-       }
+            override fun onQueryTextChange(newText: String?): Boolean {
+                myListAdapter.filter(newText ?: "")
+                return true
+            }
+        })
+
+
+
+
+    }
     }
