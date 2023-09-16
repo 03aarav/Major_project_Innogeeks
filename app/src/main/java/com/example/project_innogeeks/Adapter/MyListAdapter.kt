@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import com.example.project_innogeeks.ChatActivity
 import com.example.project_innogeeks.Model.StoreDataType
 import com.example.project_innogeeks.R
+import com.example.project_innogeeks.ShowActivity
 
 
 class MyListAdapter(private val context: Context,private var itemList: List<StoreDataType>) : RecyclerView.Adapter<MyListAdapter.ItemViewHolder>() {
@@ -42,6 +43,17 @@ class MyListAdapter(private val context: Context,private var itemList: List<Stor
             intent.putExtra("RecieverUid",currentItem.uid)
             context.startActivity(intent)
         }
+        holder.showbtn.setOnClickListener {
+            val intent=Intent(context,ShowActivity::class.java)
+            intent.putExtra("name",currentItem.name)
+            intent.putExtra("address",currentItem.addrress)
+            intent.putExtra("charge",currentItem.about)
+            intent.putExtra("image",currentItem.Imageurl)
+            intent.putExtra("phone",currentItem.phone)
+            intent.putExtra("uid",currentItem.uid)
+            context.startActivity(intent)
+        }
+
 
     }
 
@@ -68,5 +80,6 @@ class MyListAdapter(private val context: Context,private var itemList: List<Stor
         val connectbtn=itemView.findViewById<Button>(R.id.connect)
         var address=itemView.findViewById<TextView>(R.id.address1)
         val charge=itemView.findViewById<TextView>(R.id.Charge)
+        val showbtn=itemView.findViewById<Button>(R.id.showdetail)
     }
 }
