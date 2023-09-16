@@ -76,6 +76,13 @@ class CenterActivity : AppCompatActivity() {
 //        }
     }
 
+    val userAuthToken=FirebaseAuth.getInstance().currentUser?.getIdToken(true)
+
+
+
+
+
+
     private fun fetchLocationAndDisplayAddress(addressTextView: TextView) {
         // Check for location permissions
         if (ContextCompat.checkSelfPermission(
