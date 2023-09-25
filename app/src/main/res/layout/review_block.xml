@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/reviewmsg"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Very Amazing"
-        android:layout_marginLeft="15dp"
-         android:layout_marginTop="25dp"
-        android:textSize="20dp"/>
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="#F1AFE6"
+        >
+
+        <TextView
+            android:id="@+id/reviewmsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Very Amazing"
+            android:paddingLeft="15dp"
+
+             android:textStyle="italic"
+            android:textSize="25dp"/>
+
+    </androidx.cardview.widget.CardView>
+
 </LinearLayout>

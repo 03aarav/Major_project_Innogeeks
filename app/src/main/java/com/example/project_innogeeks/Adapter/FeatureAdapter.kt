@@ -42,7 +42,11 @@ class FeatureAdapter(private val context: Context,private val items: List<Featur
                      val intent=Intent(context,RegisterActivity::class.java)
                      context.startActivity(intent)
                  }
-                 5->{
+                 2->{
+                     val intent=Intent(context,VIewJobsActivity::class.java)
+                     context.startActivity(intent)
+                 }
+                 4->{
                      val intent=Intent(context,MessageActivity::class.java)
                      context.startActivity(intent)
                  }

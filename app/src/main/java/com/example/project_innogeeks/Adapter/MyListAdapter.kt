@@ -77,7 +77,7 @@ class MyListAdapter(private val context: Context,private var itemList: List<Stor
         val tname=itemView.findViewById<TextView>(R.id.tname)
         val image=itemView.findViewById<ImageView>(R.id.timage)
         val phone=itemView.findViewById<TextView>(R.id.tphone)
-        val connectbtn=itemView.findViewById<Button>(R.id.connect)
+        val connectbtn=itemView.findViewById<ImageView>(R.id.connect)
         var address=itemView.findViewById<TextView>(R.id.address1)
         val charge=itemView.findViewById<TextView>(R.id.Charge)
         val showbtn=itemView.findViewById<Button>(R.id.showdetail)

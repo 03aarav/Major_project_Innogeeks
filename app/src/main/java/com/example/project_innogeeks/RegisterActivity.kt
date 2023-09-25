@@ -55,19 +55,19 @@ class RegisterActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinneroption_category.adapter = adapter
-        binding.Adress.setOnClickListener {
-            geocoder = Geocoder(this, Locale.getDefault())
-            fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-            fetchLocationAndDisplayAddress(binding.Adress)
-
-        }
+//        binding.Adress.setOnClickListener {
+//            geocoder = Geocoder(this, Locale.getDefault())
+//            fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+//            fetchLocationAndDisplayAddress(binding.Adress)
+//
+//        }
 
         binding.timg.setOnClickListener {
             activityLauncher.launch("image/*")
             binding.tbtn.setOnClickListener {
                 val name = binding.tname.text.toString()
                 val phoneNo = binding.tphone.text.toString()
-                val Adress = binding.Adress.text.toString()
+                val Adress = binding.Adress1.text.toString()
                 //val category=binding.category.text.toString()
                 val about=binding.AboutYourself.text.toString()
                 selCategory = spinneroption_category.selectedItem.toString()

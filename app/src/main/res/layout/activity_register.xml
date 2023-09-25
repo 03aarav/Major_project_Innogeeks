@@ -3,63 +3,113 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#EFCFF8"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:layout_marginHorizontal="130dp"
+    >
 
     <ImageView
-        android:clickable="true"
         android:id="@+id/timg"
-        android:layout_width="110dp"
+        android:layout_width="116dp"
         android:layout_height="100dp"
-        android:layout_marginHorizontal="130dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/baseline_image_search_24"/>
+        android:clickable="true"
 
-    <EditText
-        android:id="@+id/tname"
+        android:src="@drawable/baseline_image_search_24" />
+
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="#E5C7F6"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginHorizontal="40dp"
-        android:hint="Enter your name"
-        android:textSize="20dp"/>
+        android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="10dp"
+        android:paddingLeft="10dp">
+        <EditText
+            android:id="@+id/tname"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Enter your name"
+            android:textSize="20dp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="#E5C7F6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        android:paddingLeft="10dp">
     <EditText
         android:id="@+id/tphone"
         android:layout_width="match_parent"
         android:layout_height="45dp"
+        android:textStyle="italic"
         android:ems="10"
-        android:layout_marginTop="40dp"
-        android:layout_marginHorizontal="40dp"
+
         android:hint="Enter your phone Number"
         android:textSize="20dp"/>
-
-    <TextView
-        android:id="@+id/Adress"
-        android:layout_width="351dp"
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="#E5C7F6"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="10dp"
+        android:paddingLeft="10dp">
+
+    <EditText
+        android:id="@+id/Adress1"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="Get the Addresss"
         android:textColor="@color/colorPrimary"
         android:textSize="20dp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="#E5C7F6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="10dp"
+        android:paddingLeft="10dp">
+
     <Spinner
         android:id="@+id/category"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginHorizontal="40dp"
+
         android:entries="@array/predefined_profeesion_category"
         android:textSize="20dp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="#E5C7F6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="10dp"
+        android:paddingLeft="20dp">
+
     <EditText
 
         android:id="@+id/AboutYourself"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginHorizontal="40dp"
+       android:textStyle="italic"
         android:hint="Define your Charge here"
         android:textSize="20dp"/>
+    </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/tbtn"
         android:layout_width="wrap_content"
